@@ -37,6 +37,7 @@
     @if (!empty($channel['related']))
     <webfeeds:related layout="card" target="browser" />
     @endif
+
     
     {{-- @if (!empty($channel['ga']))
     <webfeeds:analytics id="{{ $channel['ga'] }}" engine="GoogleAnalytics" />
@@ -55,6 +56,8 @@
       @if (!empty($item['content']))
       <content:encoded><![CDATA[{!! $item['content'] !!}]]></content:encoded>
       @endif
+      <enclosure type="audio/mpeg" url="{{ $item['link'] }}" length="0000010"/>
+
       <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">{!! $item['author'] !!}</dc:creator>
       <pubDate>{{ $item['pubdate'] }}</pubDate>
       @if (!empty($item['enclosure']))
