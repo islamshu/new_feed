@@ -116,8 +116,9 @@
                 Visit podcast website →
               </a></p>
         </div>
+        {{ dd($flux->channel) }}
+
         @foreach ($flux->channel->item as $item)
-        {{ dd($flux->channel->item) }}
         <div class="item">
             <h2><a href="https://podeo.co" target="_blank">تعلم التسويق قبل إنشاء الحملة التسويقية</a></h2>
             <div class="episode-time"><span>Fri, 28 Oct 2022 11:00:00 +0000</span> •
