@@ -17,7 +17,7 @@
     @if (!empty($channel['cover']))
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
-    <webMaster>islamshu12@gmail.com</webMaster>
+    <webMaster>islamshu12@gmail.com (SoundCloud Feeds)</webMaster>
 
 
     @if (!empty($channel['icon']))
@@ -34,6 +34,7 @@
     @if (!empty($channel['related']))
     <webfeeds:related layout="card" target="browser" />
     @endif
+    
     @if (!empty($channel['ga']))
     <webfeeds:analytics id="{{ $channel['ga'] }}" engine="GoogleAnalytics" />
     @endif
