@@ -108,7 +108,7 @@
             <h1>
                 {{ dd($flux->channel) }}
                 <div class="podcast-image">
-                    <a href="http://mghandour.com"><img src="{{ (string)$flux->channel->image->url }}" title="{{ (string)$flux->channel->title) }}"></a>
+                    <a href="http://mghandour.com"><img src="{{ (string)$flux->channel->image->url }}" title="{{ (string)$flux->channel->title }}"></a>
                 </div>بزنس على الطريق مع محمد الغندور</h1>
             <p>الجمهور المتفاعل هو بداية نجاح اي حملة تسويقية ، اتكلم عن بعض الاسباب لفشل الحملات التسويقية يلا نستمتع …</p>
             <p><a href="http://mghandour.com" target="_blank">
