@@ -112,16 +112,14 @@
             <p>
                 {{ (string)$flux->channel->description }} 
             </p>
-            <p><a href="{{ (string)$flux->channel->link }}" target="_blank">
-                Visit podcast website →
-              </a></p>
+          
         </div>
 
         @foreach ($flux->channel->item as $item)
         <div class="item">
             <h2><a href="https://podeo.co" target="_blank">{{ (string)$item->title }} </a></h2>
             <div class="episode-time"><span>{{ $item->pubDate }}</span> •
-                <span>30 minutes</span></div>
+                </div>
             <p>
                {{ (string)$item->description }} 
             </p><audio controls="true" preload="none" src="{{ $item->link }}"></audio></div>
