@@ -18,7 +18,7 @@
     @endif
     <webMaster>{!! $channel['title'] !!} </webMaster>
     <itunes:owner>
-      <itunes:name>بزنس على الطريق | مع الغندور</itunes:name>
+      <itunes:name>   {!! $channel['title'] !!}  </itunes:name>
       <itunes:email>>{{ $channel['ga'] }}</itunes:email>
     </itunes:owner>
     <itunes:author>{{ $channel['icon'] }}</itunes:author>
