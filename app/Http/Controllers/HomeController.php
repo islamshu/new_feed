@@ -7,6 +7,7 @@ use App\Models\User;
 use View;
 use Illuminate\Http\Request;
 use SimpleXMLElement;
+use wapmorgan\Mp3Info\Mp3Info;
 
 class HomeController extends Controller
 {
@@ -48,8 +49,7 @@ class HomeController extends Controller
         $content = file_get_contents($url);
         $flux = new SimpleXMLElement($content);
         $filename = 'http://dashboard.arabicreators.com/public/audio/file_example_MP3_1MG.mp3';
-        $audio = new \wapmorgan\Mp3Info\Mp3Info($filename, true);
-        dd($audio);
+       
         
         return View::make('rss_media', compact('flux'));
 
