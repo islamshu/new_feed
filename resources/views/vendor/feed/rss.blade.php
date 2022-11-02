@@ -18,7 +18,11 @@
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
     <webMaster>islamshu12@gmail.com (SoundCloud Feeds)</webMaster>
-
+    <itunes:owner>
+      <itunes:name>بزنس على الطريق | مع الغندور</itunes:name>
+      <itunes:email>feeds@soundcloud.com</itunes:email>
+    </itunes:owner>
+    <itunes:author>MGHANDOUR</itunes:author>
 
     @if (!empty($channel['icon']))
     <webfeeds:icon>{{ $channel['icon'] }}</webfeeds:icon>
