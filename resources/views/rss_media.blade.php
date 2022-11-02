@@ -116,7 +116,6 @@
                 Visit podcast website →
               </a></p>
         </div>
-        {{ dd($flux->channel) }}
 
         @foreach ($flux->channel->item as $item)
         <div class="item">
