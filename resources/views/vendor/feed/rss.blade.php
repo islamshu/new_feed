@@ -16,10 +16,10 @@
     @if (!empty($channel['cover']))
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
-    <itunes:owner>
-      <itunes:name>test </itunes:name>
-      <itunes:email>feeds@soundcloud.com</itunes:email>
-    </itunes:owner>
+    <owner>
+      <name>test </itunes:name>
+      <email>feeds@soundcloud.com</itunes:email>
+    </owner>
 
     @if (!empty($channel['icon']))
     <webfeeds:icon>{{ $channel['icon'] }}</webfeeds:icon>
