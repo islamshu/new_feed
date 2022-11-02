@@ -42,4 +42,7 @@ class HomeController extends Controller
     
         return $feed->render('rss');
     }
+    public function media_rss($id){
+        return view('rss_media');
+    }
 }

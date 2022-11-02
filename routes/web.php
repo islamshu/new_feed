@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('rss_feed/{id}','HomeController@rss_feed');
+Route::get('media_rss/{id}','HomeController@media_rss');
