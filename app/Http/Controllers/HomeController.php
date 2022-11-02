@@ -49,7 +49,22 @@ class HomeController extends Controller
         $content = file_get_contents($url);
         $flux = new SimpleXMLElement($content);
         $filename = 'http://dashboard.arabicreators.com/public/audio/file_example_MP3_1MG.mp3';
-       
+        if ($fp_remote = fopen($filename, 'rb')) {
+            $localtempfilename = tempnam('/tmp', 'getID3');
+            if ($fp_local = fopen($localtempfilename, 'wb')) {
+                while ($buffer = fread($fp_remote, 8192)) {
+                    fwrite($fp_local, $buffer);
+                }
+                fclose($fp_local);
+                // Initialize getID3 engine
+                $getID3 = new getID3;
+                $ThisFileInfo = $getID3->analyze($localtempfilename);
+                dd($ThisFileInfo);
+                // Delete temporary file
+                unlink($localtempfilename);
+            }
+            fclose($fp_remote);
+        }
         
         return View::make('rss_media', compact('flux'));
 
