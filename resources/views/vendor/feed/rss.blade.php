@@ -17,8 +17,8 @@
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
     <owner>
-      <name>test </name>
-      <email>feeds@soundcloud.com</email>
+      <name> {{ $channel['auther_name'] }} </name>
+      <email>{{ $channel['auther_email'] }}/email>
     </owner>
 
     @if (!empty($channel['icon']))
