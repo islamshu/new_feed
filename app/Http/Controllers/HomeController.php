@@ -23,6 +23,9 @@ class HomeController extends Controller
         $feed->setDateFormat('datetime'); /* 'datetime', 'timestamp' or 'carbon' */
         $feed->pubdate = now();
         $feed->lang = 'en';
+        $feed->author=$user->name;
+        $feed->email=$user->email;
+
         $feed->setShortening(true); /* true or false */
         $feed->setTextLimit(100); /* maximum length of description text */
     
