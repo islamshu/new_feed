@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:webfeeds="http://webfeeds.org/rss/1.0" xmlns:media="http://search.yahoo.com/mrss/"<?php foreach ($namespaces as $n) {
     echo " ".$n;
 } ?>>
-{{ dd($channel) }}
+
   <channel>
     <title>{!! $channel['title'] !!}</title>
     <link>{{ $channel['rssLink'] }}</link>
@@ -18,8 +18,8 @@
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
     <owner>
-      <name> {{ $channel['auther_name'] }} </name>
-      <email>{{ $channel['auther_email'] }}/email>
+      <name> <![CDATA[islam]]></name>
+      <email><![CDATA[islamshu12@gmail.com]]>/email>
     </owner>
 
     @if (!empty($channel['icon']))
