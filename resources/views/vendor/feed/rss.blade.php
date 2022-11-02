@@ -19,7 +19,7 @@
     @endif
     <owner>
       <name> <![CDATA[islam]]></name>
-      <email><![CDATA[islamshu12@gmail.com]]>/email>
+      <email><![CDATA[islamshu12@gmail.com]]></email>
     </owner>
 
     @if (!empty($channel['icon']))
