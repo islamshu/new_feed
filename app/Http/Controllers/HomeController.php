@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sound;
 use App\Models\User;
-use Facade\FlareClient\View;
+use View;
 use Illuminate\Http\Request;
 use SimpleXMLElement;
 
