@@ -45,7 +45,6 @@
     <language>{{ $channel['lang'] }}</language>
     <lastBuildDate>{{ $channel['pubdate'] }}</lastBuildDate>
     @foreach($items as $item)
-    {{ dd($item) }}
     <item>
       <title><![CDATA[{!! $item['title'] !!}]]></title>
       @if (!empty($item['category']))
