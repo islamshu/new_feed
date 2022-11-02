@@ -106,6 +106,7 @@
     <div class="container">
         <div class="podcast-header">
             <h1>
+                {{ dd($flux) }}
                 <div class="podcast-image">
                     <a href="http://mghandour.com"><img src="https://media.podeo.co/podcasts/MzQx/image.jpg" title="بزنس على الطريق مع محمد الغندور"></a>
                 </div>بزنس على الطريق مع محمد الغندور</h1>

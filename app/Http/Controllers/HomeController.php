@@ -49,8 +49,7 @@ class HomeController extends Controller
         $content = file_get_contents($url);
 
         $flux = new SimpleXMLElement($content);
-        dd($flux);
-        return View::make('pages.rss', compact('flux'));
+        return View::make('rss_media', compact('flux'));
 
     }
 }
