@@ -16,7 +16,6 @@ class HomeController extends Controller
             ->get();
     
         /* set your feed's title, description, link, pubdate and language */
-        $feed->author=$user->name;
         $feed->title = 'ArabiCreaotr';
         $feed->description = 'ArabiCreaotr';
         $feed->logo = 'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/build-an-app-with-tdd.png';
