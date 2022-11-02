@@ -11,7 +11,8 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "laravelium/feed": "^8.0"
+        "laravelium/feed": "^8.0",
+        "wapmorgan/mp3info": "^0.0.8"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

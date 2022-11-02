@@ -29,7 +29,6 @@ class HomeController extends Controller
         $feed->ga= $user->email;
         $feed->setShortening(true); /* true or false */
         $feed->setTextLimit(100); /* maximum length of description text */
-    
         $posts->each(fn ($post) => $feed->addItem([
             'title' => $post->title,
             'author' => $user->name,
@@ -47,8 +46,11 @@ class HomeController extends Controller
     public function media_rss($id){
         $url = route('rss_feed',$id);
         $content = file_get_contents($url);
-
         $flux = new SimpleXMLElement($content);
+        $filename = 'http://dashboard.arabicreators.com/public/audio/file_example_MP3_1MG.mp3';
+        $audio = new \wapmorgan\Mp3Info\Mp3Info($filename, true);
+        dd($audio);
+        
         return View::make('rss_media', compact('flux'));
 
     }
