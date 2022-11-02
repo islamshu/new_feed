@@ -17,7 +17,7 @@
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
     <itunes:owner>
-      <itunes:name>بزنس على الطريق | مع الغندور</itunes:name>
+      <itunes:name>test </itunes:name>
       <itunes:email>feeds@soundcloud.com</itunes:email>
     </itunes:owner>
 
