@@ -17,10 +17,10 @@
     @if (!empty($channel['cover']))
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
-    <owner>
+    <auther>
       <name> <![CDATA[islam]]></name>
       <email><![CDATA[islamshu12@gmail.com]]></email>
-    </owner>
+    </auther>
 
     @if (!empty($channel['icon']))
     <webfeeds:icon>{{ $channel['icon'] }}</webfeeds:icon>
