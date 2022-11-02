@@ -17,16 +17,16 @@
     @if (!empty($channel['cover']))
     <webfeeds:cover image="{{ $channel['cover'] }}" />
     @endif
-    <webMaster>islamshu12@gmail.com (SoundCloud Feeds)</webMaster>
+    <webMaster>{!! $channel['title'] !!} </webMaster>
     <itunes:owner>
       <itunes:name>بزنس على الطريق | مع الغندور</itunes:name>
-      <itunes:email>islamshu12@gmail.com</itunes:email>
+      <itunes:email>>{{ $channel['ga'] }}</itunes:email>
     </itunes:owner>
-    <itunes:author>MGHANDOUR</itunes:author>
+    <itunes:author>{{ $channel['icon'] }}</itunes:author>
 
-    @if (!empty($channel['icon']))
+    {{-- @if (!empty($channel['icon']))
     <webfeeds:icon>{{ $channel['icon'] }}</webfeeds:icon>
-    @endif
+    @endif --}}
     @if (!empty($channel['logo']))
     <webfeeds:logo>{{ $channel['logo'] }}</webfeeds:logo>
     <image>
@@ -39,9 +39,9 @@
     <webfeeds:related layout="card" target="browser" />
     @endif
     
-    @if (!empty($channel['ga']))
+    {{-- @if (!empty($channel['ga']))
     <webfeeds:analytics id="{{ $channel['ga'] }}" engine="GoogleAnalytics" />
-    @endif
+    @endif --}}
     <language>{{ $channel['lang'] }}</language>
     <lastBuildDate>{{ $channel['pubdate'] }}</lastBuildDate>
     @foreach($items as $item)
