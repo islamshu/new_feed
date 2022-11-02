@@ -16,6 +16,7 @@ class HomeController extends Controller
             ->get();
     
         /* set your feed's title, description, link, pubdate and language */
+        $feed->author=$user->name;
         $feed->title = 'ArabiCreaotr';
         $feed->description = 'ArabiCreaotr';
         $feed->logo = 'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/build-an-app-with-tdd.png';
@@ -23,7 +24,6 @@ class HomeController extends Controller
         $feed->setDateFormat('datetime'); /* 'datetime', 'timestamp' or 'carbon' */
         $feed->pubdate = now();
         $feed->lang = 'en';
-        $feed->author=$user->name;
         $feed->email=$user->email;
 
         $feed->setShortening(true); /* true or false */
