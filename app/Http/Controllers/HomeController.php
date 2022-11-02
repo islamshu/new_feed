@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Sound;
 use App\Models\User;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use SimpleXMLElement;
 
 class HomeController extends Controller
 {
@@ -43,6 +45,12 @@ class HomeController extends Controller
         return $feed->render('rss');
     }
     public function media_rss($id){
-        return view('rss_media');
+        $url = route('rss_feed',$id);
+        $content = file_get_contents($url);
+
+        $flux = new SimpleXMLElement($content);
+        dd($flux);
+        return View::make('pages.rss', compact('flux'));
+
     }
 }
