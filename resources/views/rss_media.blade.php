@@ -117,7 +117,7 @@
               </a></p>
         </div>
         @foreach ($flux->channel->item as $item)
-        {{ dd($item) }}
+        {{ dd($flux->channel->item) }}
         <div class="item">
             <h2><a href="https://podeo.co" target="_blank">تعلم التسويق قبل إنشاء الحملة التسويقية</a></h2>
             <div class="episode-time"><span>Fri, 28 Oct 2022 11:00:00 +0000</span> •
@@ -125,7 +125,7 @@
             <p>
                 حوار بين مجموعة من المسوقين يتحدثوا عن أهمية دراسة التسويق وأساسياته، وأن التسويق ليست مقتصرة على الحملة التسويقية وليست مقتصرة على منصات التواصل الاجتماعي، بل التسويق كيف أحصل على ولاء العميل؟ وأمثلة على الاخفاقات التسويقية ونصائح لتحديد جمهورك المستهدف
                 وكيفية تثقيف الجمهور بمنتجك أو خدمتك
-            </p><audio controls="true" preload="none" src="https://media.podeo.co/episodes/NzAzMA/audio.mp3"></audio></div>
+            </p><audio controls="true" preload="none" src="{{ $item->link }}"></audio></div>
         @endforeach
         
         
