@@ -33,8 +33,8 @@ class HomeController extends Controller
         $posts->each(fn ($post) => $feed->addItem([
             'title' => $post->title,
             'author' => $user->name,
-            'url' =>'http://dashboard.arabicreators.com/public/'.$post->sound,
-            'link' => 'http://dashboard.arabicreators.com/public/'.$post->sound,
+            'url' =>'http://dashboard.arabicreators.com/public/audio/'.$post->sound,
+            'link' => 'http://dashboard.arabicreators.com/public/audio/'.$post->sound,
             'pubdate' => $post->created_at,
             'description' => $post->title,
             'content' => $post->title,
