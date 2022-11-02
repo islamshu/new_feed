@@ -2,7 +2,6 @@
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:webfeeds="http://webfeeds.org/rss/1.0" xmlns:media="http://search.yahoo.com/mrss/"<?php foreach ($namespaces as $n) {
     echo " ".$n;
 } ?>>
-{{ dd($channel) }}
   <channel>
     <title>{!! $channel['title'] !!}</title>
     <link>{{ $channel['rssLink'] }}</link>
