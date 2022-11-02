@@ -20,7 +20,7 @@
     <webMaster>islamshu12@gmail.com (SoundCloud Feeds)</webMaster>
     <itunes:owner>
       <itunes:name>بزنس على الطريق | مع الغندور</itunes:name>
-      <itunes:email>feeds@soundcloud.com</itunes:email>
+      <itunes:email>islamshu12@gmail.com</itunes:email>
     </itunes:owner>
     <itunes:author>MGHANDOUR</itunes:author>
 
