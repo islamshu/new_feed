@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('rss_feed/{id}','HomeController@rss_feed')->name('rss_feed');
 Route::get('media_rss/{id}','HomeController@media_rss');
+Route::get('rss_link/{url}','HomeController@media_rss_by_id');
