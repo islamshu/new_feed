@@ -6,12 +6,15 @@ use App\Models\Sound;
 use App\Models\User;
 use View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use SimpleXMLElement;
 use wapmorgan\Mp3Info\Mp3Info;
 
 class HomeController extends Controller
 {
     public function rss_feed($id){
+        $podcast = DB::table('new_podcasts')->find($id);
+        dd($podcast);
         $user  = User::find($id);
         $feed = app("feed");
 
