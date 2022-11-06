@@ -14,18 +14,18 @@ class HomeController extends Controller
 {
     public function rss_feed($id){
         $podcast = DB::table('new_podcasts')->find($id);
-        dd($podcast);
-        $user  = User::find($id);
         $feed = app("feed");
+        $user = DB::table('user')->find($podcast->user_id);
+        $owen = DB::table('owen_podcasts')->where('podcast_id',$podcast->id)->first();
 
-        $posts = Sound::where('user_id',$user->id)
+        $posts = Sound::where('podcast_id',$owen->id)
             ->get();
     
         /* set your feed's title, description, link, pubdate and language */
-        $feed->title = 'ArabiCreaotr';
-        $feed->description = 'ArabiCreaotr';
-        $feed->logo = 'https://laracasts.nyc3.cdn.digitaloceanspaces.com/series/thumbnails/build-an-app-with-tdd.png';
-        $feed->link = 'https://arabicreators.com';
+        $feed->title = $owen->title;
+        $feed->description = $owen->description;
+        $feed->logo = 'http://dashboard.arabicreators.com/public/uplods/podcast/'.$owen->image;
+        $feed->link = 'http://dashboard.arabicreators.com';
         $feed->setDateFormat('datetime'); /* 'datetime', 'timestamp' or 'carbon' */
         $feed->pubdate = now();
         $feed->lang = 'en';
@@ -39,13 +39,14 @@ class HomeController extends Controller
             'url' =>'http://dashboard.arabicreators.com/public/audio/'.$post->sound,
             'link' => 'http://dashboard.arabicreators.com/public/audio/'.$post->sound,
             'pubdate' => $post->created_at,
-            'description' => $post->title,
+            'description' => $post->description,
             'content' => $post->title,
         ]));
     
         $feed->ctype = "application/xml";
     
         return $feed->render('rss');
+    
     }
     public function media_rss($id){
         $url = route('rss_feed',$id);
