@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function rss_feed($id){
         $podcast = DB::table('new_podcasts')->find($id);
         $feed = app("feed");
-        $user = DB::table('user')->find($podcast->user_id);
+        $user = DB::table('users')->find($podcast->user_id);
         $owen = DB::table('owen_podcasts')->where('podcast_id',$podcast->id)->first();
 
         $posts = Sound::where('podcast_id',$owen->id)
