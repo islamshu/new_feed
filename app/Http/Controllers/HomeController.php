@@ -24,7 +24,7 @@ class HomeController extends Controller
         /* set your feed's title, description, link, pubdate and language */
         $feed->title = $owen->title;
         $feed->description = $owen->description;
-        $feed->logo = 'http://dashboard.arabicreators.com/public/uploads/podcast/'.$owen->image;
+        $feed->logo = 'http://dashboard.arabicreators.com/public/uploads/'.$owen->image;
         $feed->link = 'http://dashboard.arabicreators.com';
         $feed->setDateFormat('datetime'); /* 'datetime', 'timestamp' or 'carbon' */
         $feed->pubdate = now();
